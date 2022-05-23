@@ -12,7 +12,10 @@ body {
 }
 
 .left-col {
-    background-color: purple;
+    background-image: url("./disney.jpg");
+    position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .right-col {
