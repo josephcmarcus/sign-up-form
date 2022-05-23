@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 2em;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 35% 65%;
+}
+
+.left-col {
+    background-color: purple;
+}
+
+.right-col {
+    background-color: lightgray;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+}
