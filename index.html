@@ -13,44 +13,68 @@
                 <div class="overlay">
                     <img src="./wdw-logo.png" alt="">
                 </div>
-                <div class="img-credit">Photo by <a href="https://unsplash.com/@kenrickmills" target="_blank">Kenrick Mills</a> on <a href="https://unsplash.com/photos/l2T9cWjH9cY" target="_blank">Unsplash</a></div>
+                <div class="img-credit">
+                    Photo by <a href="https://unsplash.com/@kenrickmills" target="_blank">
+                    Kenrick Mills</a> on <a href="https://unsplash.com/photos/l2T9cWjH9cY" 
+                    target="_blank">Unsplash</a>
+                </div>
             </div>
             <div class="right-col">
                 <div class="intro">
-                <p>This is not a real online service! You know you need something like 
-                    this in your life to help you realize your deepest dreams. Sign up 
-                    <em>now</em> to get started</p>
-                <p>You <em>know</em> you want to.</p>
-                <div class="form-container">
-                    <p>Let's do this!</p>
-                    <form action="/" method="POST">
-                        <div class="form-group">
-                            <label for="firstname">First Name</label>
-                            <input type="text" name="firstname" id="firstname">
-                            <label for="lastname">Last Name</label>
-                            <input type="text" name="lastname" id="lastname">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email">
-                            <label for="phone">Phone</label>
-                            <input type="text" name="phone" id="phone">
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" name="password" id="password">
-                            <label for="confirmpassword">Confirm Password</label>
-                            <input type="password" name="confirmpassword" id="confirmpassword">
+                    <p>Welcome to Walt Disney World. Create your account with us today
+                    to book a vacation, manage virtual check-in and check-out at participating Walt
+                    Disney World resorts, book Lightning Lane passes, and so much more.</p>
+                    <p>Let the magic begin!</p>
+
+                    <div class="form-container">
+                        <p>Create Your Account</p>
+                        <form action="" method="GET" onsubmit="return passwordCheck()">
+                                <div class="input-wrapper">
+                                    <label for="firstname">First Name*</label><br>
+                                    <input class="input" type="text" name="firstname" id="firstname" required>
+                                </div>
+                                <div class="input-wrapper">
+                                    <label for="lastname">Last Name*</label><br>
+                                    <input class="input" type="text" name="lastname" id="lastname" required>
+                                </div>
+                                <div class="input-wrapper">
+                                    <label for="email">Email*</label><br>
+                                    <input class="input" type="email" name="email" id="email" required>
+                                </div>
+                                <div class="input-wrapper">
+                                    <label for="phone">Phone*</label><br>
+                                    <input class="input" type="text" name="phone" id="phone" required>
+                                </div>
+                                <div class="input-wrapper">
+                                    <label for="password">Password*</label><br>
+                                    <input class="input password" type="password" name="password" id="password" 
+                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                                    title="Must contain at least one number and one uppercase and lowercase letter, 
+                                    and at least 8 or more characters" required>
+                                    <div id="password-mismatch"></div>
+                                </div>
+                                <div class="input-wrapper">
+                                    <label for="confirmpassword">Confirm&nbsp;Password*</label><br>
+                                    <input class="input password" type="password" name="confirmpassword" 
+                                    id="confirmpassword" required>
+                                </div>
+                                <div id="message">
+                                    <p>Passwords must contain the following:</p>
+                                    <p id="letter" class="invalid">A lowercase letter</p>
+                                    <p id="capital" class="invalid">A capital letter</p>
+                                    <p id="number" class="invalid">A number</p>
+                                    <p id="length" class="invalid">Minimum 8 characters</p>
+                                </div>
                         </div>
                     <div class="form-submit">
                         <button type="submit">Create Account</button>
-                        <p>Already have an account? <a href="/">Log in</a>.</p>
-                    </div>
+                        <p>Already have an account? <a href="/">Log&nbsp;in</a>.</p>
                     </form>
                 </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="./index.js"></script>
 </body>
 </html>
