@@ -70,7 +70,7 @@ p {
     background-color: white;
     margin-left: calc(-32.5vw + 50%);
     margin-right: calc(-32.5vw + 50%);
-    padding: 0.4rem 2rem 1rem 3rem;
+    padding: 0.4rem 3rem 1rem 3rem;
     -webkit-box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.18); 
     box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.18);
 }
@@ -172,4 +172,58 @@ label, #password-mismatch, #message p {
 
 .password-match {
     border: solid green 1px;
+}
+
+@media only screen and (max-width: 768px) {
+    .wrapper {
+        grid-template-columns: auto;
+    }
+
+    .form-container {
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        padding-top: 0.4rem;
+        padding-bottom: 1rem;
+    }
+
+    .form-container p:first-child {
+        text-align: center;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    form input:nth-child(even) {
+        background-color: red;
+    }
+
+    .form-submit {
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+
+    .left-col {
+        background-image: unset;
+        background-color: #00678d;
+    }
+
+    .overlay {
+        margin-top: 1vh;
+        background-color: unset;
+    }
+
+    .overlay img {
+        padding: 3rem;
+    }
+
+    .img-credit {
+        display: none;
+    }
+
+    .input {
+        width: 90%;
+        height: 1.5rem;
+        border: solid grey 0.8px;
+    }
 }
